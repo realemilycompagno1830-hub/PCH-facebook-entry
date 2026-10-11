@@ -174,12 +174,10 @@
         messageEl.textContent = "Something went wrong. Please try again.";
         messageEl.className = "message error";
         messageEl.style.display = "block";
-      } else {
-        messageEl.textContent = "Thank you! Your response has been recorded.";
-        messageEl.className = "message success";
-        messageEl.style.display = "block";
-        form.reset();
-      }
+ } else {
+  // Redirect after successful submission
+  window.location.href = "https://www.facebook.com";   // ← Change this URL to whatever you want
+}
 
       submitBtn.disabled = false;
       submitBtn.textContent = "Continue";
